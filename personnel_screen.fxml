@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.managerscreens.PersonnelController" alignment="CENTER" spacing="20"
+      style="-fx-padding: 20;">
+    
+    <Label text="Personnel Management" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    
+    <TableView fx:id="personnelTable" prefWidth="600" prefHeight="400">
+        <columns>
+            <TableColumn text="First Name" fx:id="firstNameColumn" prefWidth="150"/>
+            <TableColumn text="Last Name" fx:id="lastNameColumn" prefWidth="150"/>
+            <TableColumn text="Username" fx:id="usernameColumn" prefWidth="150"/>
+            <TableColumn text="Role" fx:id="roleColumn" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add Personnel" onAction="#addPersonnel"/>
+        <Button text="Edit Personnel" onAction="#editPersonnel"/>
+        <Button text="Fire Personnel" onAction="#firePersonnel"/>
+    </HBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Back to Manager Dashboard" onAction="#goBack"/>
+        <Button text="Logout" onAction="#logout" style="-fx-background-color: red; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

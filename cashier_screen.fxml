@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="application.cashierscreens.CashierController"
+	alignment="CENTER" spacing="20">
+	<padding>
+		<Insets top="20" right="20" bottom="20" left="20" />
+	</padding>
+
+	<Label fx:id="userInfoLabel" text="Logged in as: (Cashier)"
+		style="-fx-font-size: 18px;" />
+
+	<GridPane hgap="10" vgap="10" alignment="CENTER">
+		<Label text="Search By:" GridPane.rowIndex="0"
+			GridPane.columnIndex="0" />
+		<ComboBox fx:id="searchOptions" GridPane.rowIndex="0"
+			GridPane.columnIndex="1" />
+
+		<Label fx:id="criteriaLabel" text="Select Genre:"
+			GridPane.rowIndex="1" GridPane.columnIndex="0" />
+		<ComboBox fx:id="criteriaComboBox"
+			promptText="Select a genre..." GridPane.rowIndex="1"
+			GridPane.columnIndex="1" />
+		<TextField fx:id="criteriaTextField"
+			promptText="Enter your search..." GridPane.rowIndex="1"
+			GridPane.columnIndex="1" visible="false" />
+
+		<Button text="Search" fx:id="searchButton"
+			onAction="#searchMovies" GridPane.rowIndex="2"
+			GridPane.columnIndex="0" GridPane.columnSpan="2" />
+	</GridPane>
+
+
+
+	<Label text="Search Results:" />
+	<ListView fx:id="searchResults" prefHeight="200" />
+
+	<HBox spacing="10" alignment="CENTER">
+		<Button text="Proceed" fx:id="proceedButton"
+			onAction="#proceedToDetails" />
+		<Button text="Logout" fx:id="logoutButton" onAction="#logout"
+			style="-fx-background-color: red; -fx-text-fill: white;" />
+	</HBox>
+</VBox>

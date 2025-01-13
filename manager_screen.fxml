@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx/17.0.2"
+      fx:controller="application.managerscreens.ManagerController" alignment="CENTER" spacing="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Manager Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <VBox spacing="10" alignment="CENTER">
+        <Button text="Inventory Management" onAction="#manageInventory"/>
+        <Button text="Personnel Management" onAction="#managePersonnel"/>
+        <Button text="Pricing Management" onAction="#managePricing"/>
+        <Button text="Revenue and Tax Review" onAction="#reviewRevenue"/>
+        <Button text="Logout" onAction="#logout" style="-fx-background-color: red; -fx-text-fill: white;"/>
+    </VBox>
+</VBox>

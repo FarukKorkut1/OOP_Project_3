@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="application.managerscreens.PricingController" alignment="CENTER" spacing="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Manage Pricing and Discounts" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <Label text="Cinema Ticket Prices" style="-fx-font-size: 18px;"/>
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Hall A:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="hallAPriceField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Hall B:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="hallBPriceField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="Product Prices" style="-fx-font-size: 18px;"/>
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Beverages:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="beveragesPriceField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Biscuits:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="biscuitsPriceField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Toys:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="toysPriceField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="Discount and Tax Rates" style="-fx-font-size: 18px;"/>
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Age-based Discount (%):" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="discountRateField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Ticket Tax (%):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="ticketTaxField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Product Tax (%):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="productTaxField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Save Changes" onAction="#saveChanges"/>
+        <Button text="Back" onAction="#goBack"/>
+        <Button text="Logout" onAction="#logout" style="-fx-background-color: red; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

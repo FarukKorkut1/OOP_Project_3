@@ -1,0 +1,34 @@
+.root {
+    -fx-background-image: url('file:///C:/Users/zayca/eclipse-workspace/cinemacenter/src/application_image/background3.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+#welcome-label {
+    -fx-font-size: 50px; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: white; 
+    -fx-alignment: center; 
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
+}
+
+.label {
+    -fx-font-size: 20px; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: white; 
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
+}
+
+#login-button {
+	-fx-alignment: center;
+	-fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
+}
+
+#warning-label {
+	-fx-font-size: 20px; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: red; 
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
+}
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="application_adminscreens.AddMovieController"
+          alignment="CENTER" hgap="15" vgap="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Movie Title:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="titleField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Genre:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="genreComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Summary:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextArea fx:id="summaryArea" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="Poster Preview:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <ImageView fx:id="posterPreview" fitHeight="150" fitWidth="100" preserveRatio="true" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Button text="Select Poster" onAction="#selectPoster" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label text="Select Halls:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="1">
+        <CheckBox fx:id="hallACheckBox" text="Hall A"/>
+        <CheckBox fx:id="hallBCheckBox" text="Hall B"/>
+    </HBox>
+
+    <Button text="Add Movie" fx:id="addButton" onAction="#addMovie" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <Button text="Back" fx:id="backButton" onAction="#goBack" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    <Button text="Logout" fx:id="logoutButton" onAction="#logout" GridPane.rowIndex="6" GridPane.columnIndex="2" style="-fx-background-color: red; -fx-text-fill: white;"/>
+</GridPane>

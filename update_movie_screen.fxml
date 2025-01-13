@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/javafx" fx:controller="application_adminscreens.UpdateMovieController" spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Update Movie Details" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="movieTable" prefHeight="200" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200"/>
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="200"/>
+            <TableColumn fx:id="summaryColumn" text="Summary" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Title:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="titleField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Genre:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="genreComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Summary:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextArea fx:id="summaryArea" GridPane.rowIndex="2" GridPane.columnIndex="1" prefRowCount="3"/>
+
+        <Label text="Poster:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ImageView fx:id="posterPreview" fitWidth="200" fitHeight="200" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Button text="Select Poster" onAction="#selectPoster" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Update Movie" onAction="#updateMovie"/>
+        <Button text="Back" onAction="#goBack"/>
+    </HBox>
+</VBox>

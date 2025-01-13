@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="application_adminscreens.AdminController"
+          alignment="CENTER" hgap="15" vgap="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Admin Panel" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <Button text="Add Movie" fx:id="addMovieButton" onAction="#addMovie" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Button text="Update Movie" fx:id="updateMovieButton" onAction="#updateMovie" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Button text="Schedule Movies" fx:id="scheduleMoviesButton" onAction="#scheduleMovies" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Button text="Process Refunds" fx:id="processRefundsButton" onAction="#processRefunds" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Button text="Logout" fx:id="logoutButton" onAction="#logout" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2"
+            style="-fx-background-color: #d9534f; -fx-text-fill: white;"/>
+</GridPane>

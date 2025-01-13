@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="application_adminscreens.ProcessRefundsController"
+      alignment="CENTER" spacing="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Process Refunds" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <!-- Refund Type -->
+        <Label text="Select Refund Type:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="refundTypeComboBox" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Customer Name -->
+        <Label text="Choose Customer Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="customerNameComboBox" promptText="Select Customer" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Seat Selection Container -->
+        <Label text="Select Seats (if applicable):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <VBox fx:id="refundSeatContainer" spacing="5" GridPane.rowIndex="2" GridPane.columnIndex="1"
+              visible="false" managed="false"/>
+
+        <!-- Product Selection Container -->
+        <Label text="Select Products (if applicable):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <VBox fx:id="refundProductContainer" spacing="5" GridPane.rowIndex="3" GridPane.columnIndex="1"
+              visible="false" managed="false"/>
+    </GridPane>
+
+    <!-- Refund Summary -->
+    <Label text="Refund Summary:" style="-fx-font-size: 18px;"/>
+    <TextArea fx:id="refundSummaryArea" editable="false" prefHeight="150" prefWidth="400"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Process Refund" fx:id="processRefundButton" onAction="#processRefund"/>
+        <Button text="Back" fx:id="backButton" onAction="#goBack"/>
+        <Button text="Logout" fx:id="logoutButton" onAction="#logout" style="-fx-background-color: red; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

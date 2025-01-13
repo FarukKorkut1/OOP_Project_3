@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="application.cashierscreens.InvoiceController" alignment="CENTER" spacing="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Invoice Summary" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <TextArea fx:id="invoiceDetailsArea" prefWidth="600" prefHeight="300" wrapText="true" editable="false" style="-fx-font-family: 'Courier New';"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Confirm Payment" onAction="#confirmPayment" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="Go Back" onAction="#goBack" style="-fx-background-color: #FFA500; -fx-text-fill: white;"/>
+        <Button text="Logout" onAction="#logout" style="-fx-background-color: red; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>
